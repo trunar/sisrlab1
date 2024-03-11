@@ -10,6 +10,7 @@ module com.example.sisrlab1 {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires org.antlr.antlr4.runtime;
 
     opens com.example.sisrlab1 to javafx.fxml;
     exports com.example.sisrlab1;
