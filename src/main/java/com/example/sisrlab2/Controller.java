@@ -1,4 +1,4 @@
-package com.example.sisrlab1;
+package com.example.sisrlab2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

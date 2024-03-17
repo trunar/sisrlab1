@@ -1,4 +1,4 @@
-module com.example.sisrlab1 {
+module com.example.sisrlab2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -12,6 +12,6 @@ module com.example.sisrlab1 {
     requires com.almasb.fxgl.all;
     requires org.antlr.antlr4.runtime;
 
-    opens com.example.sisrlab1 to javafx.fxml;
-    exports com.example.sisrlab1;
+    opens com.example.sisrlab2 to javafx.fxml;
+    exports com.example.sisrlab2;
 }
