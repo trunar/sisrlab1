@@ -24,7 +24,16 @@ additiveExpression : multiplicativeExpression ((PLUS | MINUS) multiplicativeExpr
 
 multiplicativeExpression : primaryExpression ((MULTIPLY | DIVIDE) primaryExpression)*;
 
-primaryExpression : IDENTIFIER | INTEGER_LITERAL | FLOAT_LITERAL | CHARACTER_LITERAL | stringLiteral | arrayAccess | LPAREN expression RPAREN;
+primaryExpression : IDENTIFIER
+                  | INTEGER_LITERAL
+                  | FLOAT_LITERAL
+                  | CHARACTER_LITERAL
+                  | stringLiteral
+                  | arrayAccess
+                  | assignmentExpression
+                  | LPAREN expression RPAREN;
+
+assignmentExpression : IDENTIFIER ASSIGN expression;
 
 stringLiteral : STRING_LITERAL;
 
@@ -34,7 +43,11 @@ arrayInitializer : LBRACE expressionList? RBRACE;
 
 expressionList : expression (COMMA expression)*;
 
-statement : compoundStatement | expressionStatement | selectionStatement | iterationStatement | jumpStatement;
+statement : compoundStatement
+          | expressionStatement
+          | selectionStatement
+          | iterationStatement
+          | jumpStatement;
 
 compoundStatement : LBRACE declaration* statement* RBRACE;
 
