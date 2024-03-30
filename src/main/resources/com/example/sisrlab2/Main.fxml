@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisrlab2.Controller">
+<VBox style="-fx-background-color: #5F6F52;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sisrlab2.Controller">
    <children>
-      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: #5F6F52;">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: #5F6F52;">
          <children>
             <TextArea fx:id="inTextArea" style="-fx-control-inner-background: #A9B388; -fx-background-color: transparent;" wrapText="true" />
             <Button fx:id="transferButton" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#onTransferButtonAction" onMouseEntered="#onTransferButtonMouseEntered" onMouseExited="#onTransferButtonMouseExited" style="-fx-background-radius: 50px; -fx-background-color: #4CAF50;" text="&gt;">
@@ -21,6 +21,11 @@
             <TextArea fx:id="tokenTextArea" editable="false" style="-fx-control-inner-background: #A9B388; -fx-background-color: transparent;" wrapText="true" />
          </children>
       </HBox>
-      <TextArea fx:id="symbolTableTextArea" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="800.0" style="-fx-control-inner-background: #A9B388; -fx-background-color: transparent;" />
+      <HBox prefHeight="300.0" prefWidth="200.0">
+         <children>
+            <TextArea fx:id="symbolTableTextArea" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-control-inner-background: #A9B388; -fx-background-color: transparent;" wrapText="true" />
+            <TextArea fx:id="assemblyTextArea" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" style="-fx-control-inner-background: #A9B388; -fx-background-color: transparent;" wrapText="true" />
+         </children>
+      </HBox>
    </children>
 </VBox>

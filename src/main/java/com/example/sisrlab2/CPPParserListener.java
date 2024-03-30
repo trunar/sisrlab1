@@ -28,16 +28,6 @@ public interface CPPParserListener extends ParseTreeListener {
 	 */
 	void exitDeclaration(CPPParser.DeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link CPPParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link CPPParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link CPPParser#multipleVariableDeclaration}.
 	 * @param ctx the parse tree
 	 */
@@ -47,6 +37,16 @@ public interface CPPParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMultipleVariableDeclaration(CPPParser.MultipleVariableDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CPPParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CPPParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#variableDeclarator}.
 	 * @param ctx the parse tree
@@ -88,6 +88,16 @@ public interface CPPParserListener extends ParseTreeListener {
 	 */
 	void exitExpression(CPPParser.ExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CPPParser#assignmentExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CPPParser#assignmentExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CPPParser#additiveExpression}.
 	 * @param ctx the parse tree
 	 */
@@ -117,16 +127,6 @@ public interface CPPParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPrimaryExpression(CPPParser.PrimaryExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link CPPParser#assignmentExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link CPPParser#assignmentExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CPPParser#stringLiteral}.
 	 * @param ctx the parse tree

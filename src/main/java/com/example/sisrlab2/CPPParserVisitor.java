@@ -23,17 +23,17 @@ public interface CPPParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclaration(CPPParser.DeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CPPParser#variableDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link CPPParser#multipleVariableDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitMultipleVariableDeclaration(CPPParser.MultipleVariableDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CPPParser#variableDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariableDeclaration(CPPParser.VariableDeclarationContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CPPParser#variableDeclarator}.
 	 * @param ctx the parse tree
@@ -59,6 +59,12 @@ public interface CPPParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpression(CPPParser.ExpressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CPPParser#assignmentExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CPPParser#additiveExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -76,12 +82,6 @@ public interface CPPParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitPrimaryExpression(CPPParser.PrimaryExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link CPPParser#assignmentExpression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAssignmentExpression(CPPParser.AssignmentExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CPPParser#stringLiteral}.
 	 * @param ctx the parse tree
